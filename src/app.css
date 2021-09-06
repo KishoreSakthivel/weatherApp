@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Amaranth&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+}
+:root {
+  --red: #b61919;
+  --navy: #012443;
+  --pink: #ff6b6b;
+  --orange: #ff4c29;
+  --primary-font: "Amaranth", sans-serif;
+}
+.body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--navy);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.weatherBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 400px;
+  height: 600px;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: var(--orange);
+}
+.heading {
+  color: white;
+  padding: 15px 0;
+  font-family: var(--primary-font);
+}
+.btn {
+  background-color: var(--navy);
+  padding: 5px;
+  border: none;
+  color: white;
+  font-weight: 900;
+  font-family: var(--primary-font);
+  margin: 0 10px;
+  font-size: 18px;
+}
+.input {
+  padding: 5px;
+  font-family: var(--primary-font);
+  margin: 0 10px;
+  width: 180px;
+  font-size: 18px;
+}
+.input-div {
+  padding: 15px 0;
+}
+.weatherCard {
+  width: 300px;
+  height: 300px;
+  background-color: white;
+  margin: 35px 0;
+  padding: 15px 0;
+}
+.loading {
+  color: var(--orange);
+  font-family: var(--primary-font);
+  text-align: center;
+}
+.know-more {
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 10px;
+}
+.city-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: var(--primary-font);
+}
+.city-country {
+  width: 80%;
+  padding: 10px;
+  border-bottom: 1px solid grey;
+  padding: 2px;
+  font-size: 30px;
+  margin: 0 10px;
+}
+.city {
+  color: var(--orange);
+  margin: 0 5px;
+}
+.country {
+  font-size: 15px;
+  margin-left: 5px;
+}
+.lat-lon {
+  display: flex;
+  width: 80%;
+  justify-content: flex-start;
+  margin: 10px 0;
+  position: relative;
+}
+.lat-lon > span {
+  color: var(--orange);
+}
+.weather-type {
+  color: white;
+  background-color: var(--orange);
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 15px;
+  padding: 8px 12px;
+}
+.weather-info {
+  text-align: center;
+  width: 80%;
+  height: 100px;
+  margin-top: 8px;
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.media > a {
+  padding: 10px;
+}
+.note {
+  position: absolute;
+  bottom: 0%;
+  background-color: black;
+  width: 100%;
+  font-size: 15px;
+  color: white;
+}
