@@ -14,6 +14,7 @@ function Weather() {
   return (
     <div className="weatherBody">
       <h1 className="heading">Weather Forecast</h1>
+      <hr />
       <div className="input-div">
         <input
           className="input"
@@ -38,10 +39,18 @@ function Weather() {
       </div>
       <WeatherCard />
       <div className="media">
-        <a target="_blank" rel="noreferrer" href="https://www.github.com">
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.github.com/KishoreSakthivel"
+        >
           <FontAwesomeIcon icon={faGithubSquare} size="3x" color="white" />
         </a>
-        <a target="_blank" rel="noreferrer" href="https://www.instagram.com">
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.instagram.com/_._kish0re_._"
+        >
           <FontAwesomeIcon icon={faInstagramSquare} size="3x" color="white" />
         </a>
       </div>
