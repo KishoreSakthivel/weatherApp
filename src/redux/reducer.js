@@ -3,6 +3,8 @@ const initState = {
   isDatafetched: false,
   data: {},
   error: "",
+  isLocationAvailable: false,
+  user_location: { lat: "", lon: "" },
 };
 const weatherReducer = (state = initState, action) => {
   switch (action.type) {
@@ -23,6 +25,15 @@ const weatherReducer = (state = initState, action) => {
         ...state,
         loading: false,
         error: action.payload,
+      };
+    case "FETCH_USER_LOCATION":
+      return {
+        ...state,
+        isLocationAvailable: true,
+        user_location: {
+          lat: action.payload.lat,
+          lon: action.payload.lon,
+        },
       };
     default:
       return state;

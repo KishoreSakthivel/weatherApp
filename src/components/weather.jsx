@@ -1,14 +1,22 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import fetchData from "../redux/actions";
 import WeatherCard from "./weatherCard";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faGithubSquare,
-  faInstagramSquare,
-} from "@fortawesome/free-brands-svg-icons";
 
 function Weather() {
+  const state = useSelector((state) => state);
+  function getPosition() {
+    navigator.geolocation.getCurrentPosition(showPosition);
+    function showPosition(position) {
+      dispatch({
+        type: "FETCH_USER_LOCATION",
+        payload: {
+          lat: position.coords.latitude,
+          lon: position.coords.longitude,
+        },
+      });
+    }
+  }
   const [text, setText] = useState("");
   const dispatch = useDispatch();
   return (
@@ -34,26 +42,25 @@ function Weather() {
             }
           }}
         >
-          GET INFO
+          Get Info
         </button>
       </div>
+      {state.isLocationAvailable ? (
+        <div className="position">
+          <h2 className="position-heading">Your GeoLocation</h2>
+          <span className="lat">
+            lat : <span className="value">{state.user_location.lat}</span>
+          </span>
+          <span className="lon">
+            lon : <span className="value">{state.user_location.lon}</span>
+          </span>
+        </div>
+      ) : (
+        <button className="btn" onClick={getPosition}>
+          Know Your Position
+        </button>
+      )}
       <WeatherCard />
-      <div className="media">
-        <a
-          target="_blank"
-          rel="noreferrer"
-          href="https://www.github.com/KishoreSakthivel"
-        >
-          <FontAwesomeIcon icon={faGithubSquare} size="3x" color="white" />
-        </a>
-        <a
-          target="_blank"
-          rel="noreferrer"
-          href="https://www.instagram.com/_._kish0re_._"
-        >
-          <FontAwesomeIcon icon={faInstagramSquare} size="3x" color="white" />
-        </a>
-      </div>
     </div>
   );
 }
