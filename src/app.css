@@ -72,6 +72,7 @@
   border-radius: 10px;
 }
 .city-info {
+  min-height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -79,15 +80,15 @@
   font-family: var(--primary-font);
 }
 .city-country {
-  width: 80%;
+  width: 90%;
   padding: 10px;
   border-bottom: 1px solid grey;
   padding: 2px;
-  font-size: 30px;
   margin: 0 10px;
 }
 .city {
   color: var(--orange);
+  font-size: 25px;
   margin: 0 5px;
 }
 .country {
@@ -126,6 +127,7 @@
   padding: 10px;
 }
 .note {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   position: absolute;
   bottom: 0%;
   background-color: black;

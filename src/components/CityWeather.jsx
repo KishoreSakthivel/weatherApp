@@ -13,7 +13,7 @@ function CityWeather() {
   return (
     <div className="city-info">
       <div className="city-country">
-        <FontAwesomeIcon icon={faMapMarkerAlt} color="red" />
+        <FontAwesomeIcon icon={faMapMarkerAlt} color="red" size="2x" />
         <span className="city">{state.data.name}</span>,
         <span className="country">{state.data.sys.country}</span>
       </div>

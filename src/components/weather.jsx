@@ -9,7 +9,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 function Weather() {
-  const [text, setText] = useState("tirupur");
+  const [text, setText] = useState("");
   const dispatch = useDispatch();
   return (
     <div className="weatherBody">
@@ -20,7 +20,7 @@ function Weather() {
           type="text"
           value={text}
           onChange={(e) => setText(e.target.value)}
-          placeholder="Enter your city"
+          placeholder="eg : london"
         ></input>
         <button
           className="btn submit"
